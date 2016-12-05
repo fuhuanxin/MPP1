@@ -8,6 +8,13 @@ class Logic : public QObject
     Q_OBJECT
 public:
     explicit Logic(QObject *parent = 0);
+    ~Logic();
+
+    static Logic *inst();
+    bool init();
+
+private:
+    static Logic* s_inst;
 
 signals:
 
